@@ -4,16 +4,12 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.stream.IntStream;
 
 public class SimpleArraySum {
 
-    /*
-     * Complete the simpleArraySum function below.
-     */
     static int simpleArraySum(int[] ar) {
-        /*
-         * Write your code here.
-         */
+        return IntStream.of(ar).sum();
     }
 
     private static final Scanner scanner = new Scanner(System.in);
