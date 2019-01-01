@@ -4,13 +4,13 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+import java.util.stream.LongStream;
 
 public class AVeryBigSum {
 
     // Complete the aVeryBigSum function below.
     static long aVeryBigSum(long[] ar) {
-
-
+        return LongStream.of(ar).sum();
     }
 
     private static final Scanner scanner = new Scanner(System.in);
