@@ -1,6 +1,7 @@
 package algorithms.warmup;
 
 import java.io.*;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
@@ -11,8 +12,15 @@ public class ComparetheTriplets {
 
     // Complete the compareTriplets function below.
     static List<Integer> compareTriplets(List<Integer> a, List<Integer> b) {
-
-
+        int aliceScore, bobScore = aliceScore = 0;
+        for (int i = 0; i < a.size(); i++) {
+            if (a.get(i) > b.get(i)) {
+                aliceScore++;
+            } else if (a.get(i) < b.get(i)) {
+                bobScore++;
+            }
+        }
+        return Arrays.asList(aliceScore, bobScore);
     }
 
     public static void main(String[] args) throws IOException {
