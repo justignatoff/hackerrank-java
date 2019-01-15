@@ -7,7 +7,6 @@ public class Anagrams {
         // Complete the function
         int[] aChars = a.toUpperCase().chars().sorted().toArray();
         int[] bChars = b.toUpperCase().chars().sorted().toArray();
-        boolean resualt = true;
         if (aChars.length != bChars.length) {
             return false;
         }
