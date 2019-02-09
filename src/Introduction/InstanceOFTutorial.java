@@ -8,7 +8,7 @@ class Rockstar{   }
 class Hacker{}
 
 
-public class InstanceOfTutorial{
+public class InstanceOFTutorial{
 
     static String count(ArrayList mylist){
         int a = 0,b = 0,c = 0;
@@ -21,7 +21,7 @@ public class InstanceOfTutorial{
             if(element instanceof Hacker)
             c++;
         }
-        String ret = Integer.toString(a)+" "+ Integer.toString(b)+" "+ Integer.toString(c);
+        String ret = a +" "+ b +" "+ c;
         return ret;
     }
 
