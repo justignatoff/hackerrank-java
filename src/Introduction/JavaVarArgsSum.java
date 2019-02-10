@@ -5,17 +5,16 @@ import java.io.InputStreamReader;
 import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
-import java.util.StringJoiner;
 
 class Add {
     void add(int... elems){
         int sum = 0;
-        StringJoiner joiner = new StringJoiner("+");
+        StringBuilder builder = new StringBuilder();
         for (int i : elems) {
             sum += i;
-            joiner.add("" + i);
+            builder.append(i + "+");
         }
-        System.out.println(joiner.toString() + "=" + sum);
+        System.out.println(builder.replace(builder.length() - 1, builder.length(), "=" ).toString()  + sum);
     }
 }
 public class JavaVarArgsSum {
