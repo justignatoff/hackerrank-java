@@ -1,6 +1,6 @@
 package Introduction;
 
-import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -10,7 +10,7 @@ public class Java1DArrayPart2 {
     }
     public static boolean canWin(int leap, int[] game) {
         // Return true if you can win the game; otherwise, return false.
-        HashSet<Integer> current = new HashSet<>(Arrays.asList(0));
+        HashSet<Integer> current = new HashSet<>(Collections.singletonList(0));
         HashSet<Integer> used = new HashSet<>();
         while (!current.isEmpty()) {
             int pos = current.stream().findAny().get();
