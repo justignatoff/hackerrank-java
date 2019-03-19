@@ -32,7 +32,7 @@ public class D {
         StringBuilder res = new StringBuilder();
         for (char ch = 'a'; ch <= 'z'; ch++) {
             while (chInPos1.get(ch).size() > 0 && chInPos2.get(ch).size() > 0) {
-                res.append(chInPos1.get(ch).get(0) + " " + chInPos2.get(ch).get(0) + "\n");
+                res.append(chInPos1.get(ch).get(0)).append(" ").append(chInPos2.get(ch).get(0)).append("\n");
                 chInPos1.get(ch).remove(0);
                 chInPos2.get(ch).remove(0);
                 count++;
@@ -42,7 +42,7 @@ public class D {
 
         for (char ch = 'a'; ch <= 'z'; ch++) {
             while (chInPos2.get(ch).size() > 0 && chInPos1.get('?').size() > 0) {
-                res.append(chInPos1.get('?').get(0) + " " + chInPos2.get(ch).get(0) + "\n");
+                res.append(chInPos1.get('?').get(0)).append(" ").append(chInPos2.get(ch).get(0)).append("\n");
                 chInPos1.get('?').remove(0);
                 chInPos2.get(ch).remove(0);
                 count++;
@@ -51,7 +51,7 @@ public class D {
 
         for (char ch = 'a'; ch <= 'z'; ch++) {
             while (chInPos1.get(ch).size() > 0 && chInPos2.get('?').size() > 0) {
-                res.append(chInPos1.get(ch).get(0) + " " + chInPos2.get('?').get(0) + "\n");
+                res.append(chInPos1.get(ch).get(0)).append(" ").append(chInPos2.get('?').get(0)).append("\n");
                 chInPos2.get('?').remove(0);
                 chInPos1.get(ch).remove(0);
                 count++;
@@ -59,7 +59,7 @@ public class D {
         }
 
         while (chInPos1.get('?').size() > 0 && chInPos2.get('?').size() > 0) {
-            res.append(chInPos1.get('?').get(0) + " " + chInPos2.get('?').get(0) + "\n");
+            res.append(chInPos1.get('?').get(0)).append(" ").append(chInPos2.get('?').get(0)).append("\n");
             chInPos2.get('?').remove(0);
             chInPos1.get('?').remove(0);
             count++;

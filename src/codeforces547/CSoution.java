@@ -4,13 +4,13 @@ package codeforces547;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class С{
+public class CSoution {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int n = in.nextInt();
         in.nextLine();
         List<Integer> diff = Arrays.stream(in.nextLine().split(" "))
-                .map(s -> Integer.parseInt(s)).collect(Collectors.toList());
+                .map(Integer::parseInt).collect(Collectors.toList());
 
         int sum = 0;
         List<Integer> partSums = new ArrayList<>(diff.size());
@@ -31,11 +31,11 @@ public class С{
         }
 
         List<Integer> res = new ArrayList<>();
-        for (int i = startValue;;) {
+        for (; ;) {
             res.clear();
-            res.add(i);
+            res.add(startValue);
             HashSet<Integer> used = new HashSet<>();
-            used.add(i);
+            used.add(startValue);
             for (int j = 0; j < n - 1; j++) {
                 int num = res.get(j) + diff.get(j);
                 if (num < 1 || num > n || used.contains(num)) {
