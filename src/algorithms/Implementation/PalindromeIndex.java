@@ -1,0 +1,51 @@
+package algorithms.Implementation;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class PalindromeIndex {
+    // Complete the palindromeIndex function below.
+    static int palindromeIndex(String s) {
+        int res = -1;
+        int head = 0;
+        int tail = s.length() - 1;
+        while(head < tail) {
+            if (s.charAt(head) != s.charAt(tail)) {
+                if (palindromeIndex(s.substring(head + 1, tail + 1)) == -1) {
+                    res = head;
+                } else {
+                    res = tail;
+                }
+                break;
+            }
+            head++;
+            tail--;
+        }
+        return res;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+    public static void main(String[] args) throws IOException {
+        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
+
+        int q = scanner.nextInt();
+        scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
+
+        for (int qItr = 0; qItr < q; qItr++) {
+            String s = scanner.nextLine();
+
+            int result = palindromeIndex(s);
+
+
+            bufferedWriter.write(String.valueOf(result));
+            bufferedWriter.newLine();
+        }
+
+        bufferedWriter.close();
+
+        scanner.close();
+    }
+}
